@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LAPIN - Logiciel d&#39;Apprentissage Pour Imagerie Numérique:  Fichier source de qlapinimage.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">LAPIN - Logiciel d&#39;Apprentissage Pour Imagerie Numérique
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('qlapinimage_8h_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">qlapinimage.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="qlapinimage_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef QLAPINIMAGE_H</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define QLAPINIMAGE_H</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;QObject.h&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;QSize.h&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;QImage.h&gt;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_q_l_a_p_i_n_image.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_q_l_a_p_i_n_image.html">QLAPINImage</a> : <span class="keyword">public</span> QObject</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  Q_OBJECT</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="class_q_l_a_p_i_n_image.html#a4e45b5c01cb5f35db87461a84799b29b">QLAPINImage</a>(QSize sizPreviewSize, QObject *parent = NULL);</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <a class="code" href="class_q_l_a_p_i_n_image.html#a6db8057a511975ec32e2c5a324f6439c">~QLAPINImage</a>();</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_q_l_a_p_i_n_image.html#a1b3b2c7ebd924895abf7230e2dfcce05">Load</a>(<span class="keyword">const</span> QString&amp; filename);</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_q_l_a_p_i_n_image.html#ae0a68431233c3ed29aaa2b6665f87afa">Save</a>(<span class="keyword">const</span> QString&amp; filename);</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  QImage&amp; <a class="code" href="class_q_l_a_p_i_n_image.html#ac56d6fd4ff6c2cae1f5edcf1528d4eff">GetImage</a>(<span class="keywordtype">bool</span> preview);</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_q_l_a_p_i_n_image.html#a07e8060dac5a98eb564348c835c2647b">   43</a></span>&#160;  QImage <a class="code" href="class_q_l_a_p_i_n_image.html#a07e8060dac5a98eb564348c835c2647b">m_imgPreview</a>;</div><div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_q_l_a_p_i_n_image.html#a0911b70583cdd7630f82c6458324e1aa">   45</a></span>&#160;  QImage <a class="code" href="class_q_l_a_p_i_n_image.html#a0911b70583cdd7630f82c6458324e1aa">m_imgGrayImage</a>;</div><div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_q_l_a_p_i_n_image.html#aabd9e5b832242126d5df7b6dc86aba4a">   47</a></span>&#160;  QSize <a class="code" href="class_q_l_a_p_i_n_image.html#aabd9e5b832242126d5df7b6dc86aba4a">m_sizPreviewSize</a>;</div><div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_q_l_a_p_i_n_image.html#acd3c373aefe982a905ace5ddbc86b5f9">   49</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_q_l_a_p_i_n_image.html#acd3c373aefe982a905ace5ddbc86b5f9">m_bPreviewOK</a>;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_q_l_a_p_i_n_image.html#afccf8af5d5d2f8fffb53d298368f84a1">MakePreview</a>();</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif // QLAPINIMAGE_H</span></div><div class="ttc" id="class_q_l_a_p_i_n_image_html_a1b3b2c7ebd924895abf7230e2dfcce05"><div class="ttname"><a href="class_q_l_a_p_i_n_image.html#a1b3b2c7ebd924895abf7230e2dfcce05">QLAPINImage::Load</a></div><div class="ttdeci">bool Load(const QString &amp;filename)</div><div class="ttdoc">Charge une image.</div><div class="ttdef"><b>Definition:</b> <a href="qlapinimage_8cpp_source.html#l00051">qlapinimage.cpp:51</a></div></div>
+<div class="ttc" id="class_q_l_a_p_i_n_image_html"><div class="ttname"><a href="class_q_l_a_p_i_n_image.html">QLAPINImage</a></div><div class="ttdoc">Gestion d'une image pour le logiciel LAPIN.</div><div class="ttdef"><b>Definition:</b> <a href="qlapinimage_8h_source.html#l00023">qlapinimage.h:23</a></div></div>
+<div class="ttc" id="class_q_l_a_p_i_n_image_html_ae0a68431233c3ed29aaa2b6665f87afa"><div class="ttname"><a href="class_q_l_a_p_i_n_image.html#ae0a68431233c3ed29aaa2b6665f87afa">QLAPINImage::Save</a></div><div class="ttdeci">bool Save(const QString &amp;filename)</div><div class="ttdoc">Enregistre une image au format pbm.</div><div class="ttdef"><b>Definition:</b> <a href="qlapinimage_8cpp_source.html#l00076">qlapinimage.cpp:76</a></div></div>
+<div class="ttc" id="class_q_l_a_p_i_n_image_html_a6db8057a511975ec32e2c5a324f6439c"><div class="ttname"><a href="class_q_l_a_p_i_n_image.html#a6db8057a511975ec32e2c5a324f6439c">QLAPINImage::~QLAPINImage</a></div><div class="ttdeci">~QLAPINImage()</div><div class="ttdoc">Destructeur.</div><div class="ttdef"><b>Definition:</b> <a href="qlapinimage_8cpp_source.html#l00033">qlapinimage.cpp:33</a></div></div>
+<div class="ttc" id="class_q_l_a_p_i_n_image_html_afccf8af5d5d2f8fffb53d298368f84a1"><div class="ttname"><a href="class_q_l_a_p_i_n_image.html#afccf8af5d5d2f8fffb53d298368f84a1">QLAPINImage::MakePreview</a></div><div class="ttdeci">void MakePreview()</div><div class="ttdoc">Fonction permettant de synchroniser la miniature avec l'image complète.</div><div class="ttdef"><b>Definition:</b> <a href="qlapinimage_8cpp_source.html#l00159">qlapinimage.cpp:159</a></div></div>
+<div class="ttc" id="class_q_l_a_p_i_n_image_html_a0911b70583cdd7630f82c6458324e1aa"><div class="ttname"><a href="class_q_l_a_p_i_n_image.html#a0911b70583cdd7630f82c6458324e1aa">QLAPINImage::m_imgGrayImage</a></div><div class="ttdeci">QImage m_imgGrayImage</div><div class="ttdoc">L'objet QImage de l'image complète.</div><div class="ttdef"><b>Definition:</b> <a href="qlapinimage_8h_source.html#l00045">qlapinimage.h:45</a></div></div>
+<div class="ttc" id="class_q_l_a_p_i_n_image_html_ac56d6fd4ff6c2cae1f5edcf1528d4eff"><div class="ttname"><a href="class_q_l_a_p_i_n_image.html#ac56d6fd4ff6c2cae1f5edcf1528d4eff">QLAPINImage::GetImage</a></div><div class="ttdeci">QImage &amp; GetImage(bool preview)</div><div class="ttdoc">Récupère un objet QImage représentant soit la miniature, soit l'image complète.</div><div class="ttdef"><b>Definition:</b> <a href="qlapinimage_8cpp_source.html#l00135">qlapinimage.cpp:135</a></div></div>
+<div class="ttc" id="class_q_l_a_p_i_n_image_html_aabd9e5b832242126d5df7b6dc86aba4a"><div class="ttname"><a href="class_q_l_a_p_i_n_image.html#aabd9e5b832242126d5df7b6dc86aba4a">QLAPINImage::m_sizPreviewSize</a></div><div class="ttdeci">QSize m_sizPreviewSize</div><div class="ttdoc">La taille de la miniature.</div><div class="ttdef"><b>Definition:</b> <a href="qlapinimage_8h_source.html#l00047">qlapinimage.h:47</a></div></div>
+<div class="ttc" id="class_q_l_a_p_i_n_image_html_acd3c373aefe982a905ace5ddbc86b5f9"><div class="ttname"><a href="class_q_l_a_p_i_n_image.html#acd3c373aefe982a905ace5ddbc86b5f9">QLAPINImage::m_bPreviewOK</a></div><div class="ttdeci">bool m_bPreviewOK</div><div class="ttdoc">Flag permettant de savoir si la miniature est synchronisée avec l'image complète.</div><div class="ttdef"><b>Definition:</b> <a href="qlapinimage_8h_source.html#l00049">qlapinimage.h:49</a></div></div>
+<div class="ttc" id="class_q_l_a_p_i_n_image_html_a4e45b5c01cb5f35db87461a84799b29b"><div class="ttname"><a href="class_q_l_a_p_i_n_image.html#a4e45b5c01cb5f35db87461a84799b29b">QLAPINImage::QLAPINImage</a></div><div class="ttdeci">QLAPINImage(QSize sizPreviewSize, QObject *parent=NULL)</div><div class="ttdoc">Constructeur.</div><div class="ttdef"><b>Definition:</b> <a href="qlapinimage_8cpp_source.html#l00020">qlapinimage.cpp:20</a></div></div>
+<div class="ttc" id="class_q_l_a_p_i_n_image_html_a07e8060dac5a98eb564348c835c2647b"><div class="ttname"><a href="class_q_l_a_p_i_n_image.html#a07e8060dac5a98eb564348c835c2647b">QLAPINImage::m_imgPreview</a></div><div class="ttdeci">QImage m_imgPreview</div><div class="ttdoc">L'objet QImage de la miniature.</div><div class="ttdef"><b>Definition:</b> <a href="qlapinimage_8h_source.html#l00043">qlapinimage.h:43</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="qlapinimage_8h.html">qlapinimage.h</a></li>
+    <li class="footer">Généré le Dimanche 5 Janvier 2020 15:11:37 pour LAPIN - Logiciel d&#39;Apprentissage Pour Imagerie Numérique par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
+</body>
+</html>

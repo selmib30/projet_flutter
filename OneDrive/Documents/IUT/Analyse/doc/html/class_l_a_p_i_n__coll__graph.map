@@ -1,0 +1,7 @@
+<map id="LAPIN" name="LAPIN">
+<area shape="rect" id="node1" title="Lapin." alt="" coords="13,647,203,1003"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,455,112,533"/>
+<area shape="rect" id="node3" href="$class_q_l_a_p_i_n_threshold.html" title="Classe de seuillage d&#39;une image." alt="" coords="137,404,290,584"/>
+<area shape="rect" id="node4" title=" " alt="" coords="159,5,230,83"/>
+<area shape="rect" id="node5" href="$class_q_l_a_p_i_n_image.html" title="Gestion d&#39;une image pour le logiciel LAPIN." alt="" coords="198,132,333,327"/>
+</map>

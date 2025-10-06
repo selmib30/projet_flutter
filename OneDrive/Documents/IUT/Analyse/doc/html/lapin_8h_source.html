@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LAPIN - Logiciel d&#39;Apprentissage Pour Imagerie Numérique:  Fichier source de lapin.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">LAPIN - Logiciel d&#39;Apprentissage Pour Imagerie Numérique
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('lapin_8h_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">lapin.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="lapin_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef LAPIN_H </span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define LAPIN_H</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;QMainWindow&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;QEvent&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;QTimer&gt;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="qlapinthreshold_8h.html">qlapinthreshold.h</a>&quot;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;ui_lapin.h&quot;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_l_a_p_i_n.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_l_a_p_i_n.html">LAPIN</a> : <span class="keyword">public</span> QMainWindow</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  Q_OBJECT</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <a class="code" href="class_l_a_p_i_n.html#a9da8f21378152169bc0d8a7bfd0d25c6">LAPIN</a>(QWidget *parent = 0, Qt::WindowFlags flags = 0);</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <a class="code" href="class_l_a_p_i_n.html#a9b83f5412324c3c7dd4617404eb13215">~LAPIN</a>();</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_l_a_p_i_n.html#ac8f77e0217174b934c6fb1a9c8944d13">   41</a></span>&#160;  Ui::LAPINClass <a class="code" href="class_l_a_p_i_n.html#ac8f77e0217174b934c6fb1a9c8944d13">ui</a>;</div><div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_l_a_p_i_n.html#a1b1eba5815663f550334f43c66769a97">   43</a></span>&#160;  <a class="code" href="class_q_l_a_p_i_n_threshold.html">QLAPINThreshold</a> <a class="code" href="class_l_a_p_i_n.html#a1b1eba5815663f550334f43c66769a97">m_lapThreshold</a>;</div><div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_l_a_p_i_n.html#a8452bbb6bcec62976282b37014d293a1">   45</a></span>&#160;  QTimer <a class="code" href="class_l_a_p_i_n.html#a8452bbb6bcec62976282b37014d293a1">m_qTimer</a>;</div><div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_l_a_p_i_n.html#a97d6881f2a2f1c8926ee053d0f36c9ca">   47</a></span>&#160;  QString <a class="code" href="class_l_a_p_i_n.html#a97d6881f2a2f1c8926ee053d0f36c9ca">m_strSavedFileName</a>;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_l_a_p_i_n.html#aafbb6aebdd88080868c3158dcce6fb3b">   51</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_l_a_p_i_n.html#aafbb6aebdd88080868c3158dcce6fb3b">m_bModified</a>;</div><div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_l_a_p_i_n.html#a712e58dd5f45b51ebe59fa70565cf77d">   55</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_l_a_p_i_n.html#a712e58dd5f45b51ebe59fa70565cf77d">m_bApplied</a>;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_l_a_p_i_n.html#a2a46f165743957ea0b4a8896a048782b">VerifyModifications</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_l_a_p_i_n.html#a0e64fb484e53f5b1db2ff88f5edd953a">Preview</a>();</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">private</span> slots:</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_l_a_p_i_n.html#a4fb2e413a8239cc552b0f38213bd8ee6">Apply</a>();</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_l_a_p_i_n.html#af933dbb543ea19161ff25862c4ed9881">on_chk_AlwaysApply_stateChanged</a>(<span class="keywordtype">int</span>);</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_l_a_p_i_n.html#a68a7071936f616793fe5716feb2e8ee8">on_spin_k2_valueChanged</a>(<span class="keywordtype">int</span>);</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_l_a_p_i_n.html#aac8c5cfdb712c7569019e2ecc63b4828">on_spin_k1_valueChanged</a>(<span class="keywordtype">int</span>);</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_l_a_p_i_n.html#a2f5b92920c55507456a9d386465f2d9a">on_actionQuitter_triggered</a>();</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_l_a_p_i_n.html#a045e43142d705f9c38a9649b5d78cf0c">on_actionEnregistrerSous_triggered</a>();</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_l_a_p_i_n.html#a1ab9d2ecb49e6c38a4efbd14314b97ac">on_actionEnregistrer_triggered</a>();</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_l_a_p_i_n.html#a0702c085d7b3ba20eceda7d9d358094f">on_actionOuvrir_triggered</a>();</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">protected</span>:</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_l_a_p_i_n.html#af8029171606af8531464de1da46d67d8">closeEvent</a> ( QCloseEvent * qEvent ) ;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;};</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#endif // LAPIN_H</span></div><div class="ttc" id="class_l_a_p_i_n_html_a0e64fb484e53f5b1db2ff88f5edd953a"><div class="ttname"><a href="class_l_a_p_i_n.html#a0e64fb484e53f5b1db2ff88f5edd953a">LAPIN::Preview</a></div><div class="ttdeci">void Preview()</div><div class="ttdoc">Calcule et affiche l'image de prévisualisation.</div><div class="ttdef"><b>Definition:</b> <a href="lapin_8cpp_source.html#l00330">lapin.cpp:330</a></div></div>
+<div class="ttc" id="class_l_a_p_i_n_html_a4fb2e413a8239cc552b0f38213bd8ee6"><div class="ttname"><a href="class_l_a_p_i_n.html#a4fb2e413a8239cc552b0f38213bd8ee6">LAPIN::Apply</a></div><div class="ttdeci">void Apply()</div><div class="ttdoc">Calcule et affiche l'image complète seuillée.</div><div class="ttdef"><b>Definition:</b> <a href="lapin_8cpp_source.html#l00364">lapin.cpp:364</a></div></div>
+<div class="ttc" id="class_l_a_p_i_n_html_aac8c5cfdb712c7569019e2ecc63b4828"><div class="ttname"><a href="class_l_a_p_i_n.html#aac8c5cfdb712c7569019e2ecc63b4828">LAPIN::on_spin_k1_valueChanged</a></div><div class="ttdeci">void on_spin_k1_valueChanged(int)</div><div class="ttdoc">Slot connecté à la valeur &quot;k1&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="lapin_8cpp_source.html#l00211">lapin.cpp:211</a></div></div>
+<div class="ttc" id="class_l_a_p_i_n_html_a97d6881f2a2f1c8926ee053d0f36c9ca"><div class="ttname"><a href="class_l_a_p_i_n.html#a97d6881f2a2f1c8926ee053d0f36c9ca">LAPIN::m_strSavedFileName</a></div><div class="ttdeci">QString m_strSavedFileName</div><div class="ttdoc">Nom du fichier image enregistré.</div><div class="ttdef"><b>Definition:</b> <a href="lapin_8h_source.html#l00047">lapin.h:47</a></div></div>
+<div class="ttc" id="class_l_a_p_i_n_html_a9b83f5412324c3c7dd4617404eb13215"><div class="ttname"><a href="class_l_a_p_i_n.html#a9b83f5412324c3c7dd4617404eb13215">LAPIN::~LAPIN</a></div><div class="ttdeci">~LAPIN()</div><div class="ttdoc">Destructeur.</div><div class="ttdef"><b>Definition:</b> <a href="lapin_8cpp_source.html#l00051">lapin.cpp:51</a></div></div>
+<div class="ttc" id="class_l_a_p_i_n_html_af8029171606af8531464de1da46d67d8"><div class="ttname"><a href="class_l_a_p_i_n.html#af8029171606af8531464de1da46d67d8">LAPIN::closeEvent</a></div><div class="ttdeci">virtual void closeEvent(QCloseEvent *qEvent)</div><div class="ttdoc">Fonction membre appelée au moment de la fermeture de la fenêtre.</div><div class="ttdef"><b>Definition:</b> <a href="lapin_8cpp_source.html#l00256">lapin.cpp:256</a></div></div>
+<div class="ttc" id="class_l_a_p_i_n_html_aafbb6aebdd88080868c3158dcce6fb3b"><div class="ttname"><a href="class_l_a_p_i_n.html#aafbb6aebdd88080868c3158dcce6fb3b">LAPIN::m_bModified</a></div><div class="ttdeci">bool m_bModified</div><div class="ttdoc">Flag de modification de fichier. Vaut true si l'image a été modifiée depuis la dernière sauvegarde.</div><div class="ttdef"><b>Definition:</b> <a href="lapin_8h_source.html#l00051">lapin.h:51</a></div></div>
+<div class="ttc" id="class_l_a_p_i_n_html_a0702c085d7b3ba20eceda7d9d358094f"><div class="ttname"><a href="class_l_a_p_i_n.html#a0702c085d7b3ba20eceda7d9d358094f">LAPIN::on_actionOuvrir_triggered</a></div><div class="ttdeci">void on_actionOuvrir_triggered()</div><div class="ttdoc">Slot connecté à l'action &quot;Ouvrir...&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="lapin_8cpp_source.html#l00077">lapin.cpp:77</a></div></div>
+<div class="ttc" id="class_l_a_p_i_n_html_a712e58dd5f45b51ebe59fa70565cf77d"><div class="ttname"><a href="class_l_a_p_i_n.html#a712e58dd5f45b51ebe59fa70565cf77d">LAPIN::m_bApplied</a></div><div class="ttdeci">bool m_bApplied</div><div class="ttdoc">Flag d'application du double seuillage. Vaut true si le double seuillage a été appliqué sur l'image c...</div><div class="ttdef"><b>Definition:</b> <a href="lapin_8h_source.html#l00055">lapin.h:55</a></div></div>
+<div class="ttc" id="class_q_l_a_p_i_n_threshold_html"><div class="ttname"><a href="class_q_l_a_p_i_n_threshold.html">QLAPINThreshold</a></div><div class="ttdoc">Classe de seuillage d'une image.</div><div class="ttdef"><b>Definition:</b> <a href="qlapinthreshold_8h_source.html#l00023">qlapinthreshold.h:23</a></div></div>
+<div class="ttc" id="class_l_a_p_i_n_html_a1ab9d2ecb49e6c38a4efbd14314b97ac"><div class="ttname"><a href="class_l_a_p_i_n.html#a1ab9d2ecb49e6c38a4efbd14314b97ac">LAPIN::on_actionEnregistrer_triggered</a></div><div class="ttdeci">void on_actionEnregistrer_triggered()</div><div class="ttdoc">Slot connecté à l'action &quot;Enregistrer&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="lapin_8cpp_source.html#l00118">lapin.cpp:118</a></div></div>
+<div class="ttc" id="class_l_a_p_i_n_html_a045e43142d705f9c38a9649b5d78cf0c"><div class="ttname"><a href="class_l_a_p_i_n.html#a045e43142d705f9c38a9649b5d78cf0c">LAPIN::on_actionEnregistrerSous_triggered</a></div><div class="ttdeci">void on_actionEnregistrerSous_triggered()</div><div class="ttdoc">Slot connecté à l'action &quot;Enregistrer Sous...&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="lapin_8cpp_source.html#l00157">lapin.cpp:157</a></div></div>
+<div class="ttc" id="class_l_a_p_i_n_html_ac8f77e0217174b934c6fb1a9c8944d13"><div class="ttname"><a href="class_l_a_p_i_n.html#ac8f77e0217174b934c6fb1a9c8944d13">LAPIN::ui</a></div><div class="ttdeci">Ui::LAPINClass ui</div><div class="ttdoc">Définition des contrôles de la fenêtre (définis par QtDesigner).</div><div class="ttdef"><b>Definition:</b> <a href="lapin_8h_source.html#l00041">lapin.h:41</a></div></div>
+<div class="ttc" id="class_l_a_p_i_n_html_a68a7071936f616793fe5716feb2e8ee8"><div class="ttname"><a href="class_l_a_p_i_n.html#a68a7071936f616793fe5716feb2e8ee8">LAPIN::on_spin_k2_valueChanged</a></div><div class="ttdeci">void on_spin_k2_valueChanged(int)</div><div class="ttdoc">Slot connecté à la valeur &quot;k2&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="lapin_8cpp_source.html#l00235">lapin.cpp:235</a></div></div>
+<div class="ttc" id="class_l_a_p_i_n_html_af933dbb543ea19161ff25862c4ed9881"><div class="ttname"><a href="class_l_a_p_i_n.html#af933dbb543ea19161ff25862c4ed9881">LAPIN::on_chk_AlwaysApply_stateChanged</a></div><div class="ttdeci">void on_chk_AlwaysApply_stateChanged(int)</div><div class="ttdoc">Slot connecté à la case à cocher &quot;Appliquer tout de suite&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="lapin_8cpp_source.html#l00391">lapin.cpp:391</a></div></div>
+<div class="ttc" id="class_l_a_p_i_n_html_a2a46f165743957ea0b4a8896a048782b"><div class="ttname"><a href="class_l_a_p_i_n.html#a2a46f165743957ea0b4a8896a048782b">LAPIN::VerifyModifications</a></div><div class="ttdeci">bool VerifyModifications(void)</div><div class="ttdoc">Vérifie si des modifications non enregistrées sont survenues et propose l'enregistrement à l'utilisat...</div><div class="ttdef"><b>Definition:</b> <a href="lapin_8cpp_source.html#l00285">lapin.cpp:285</a></div></div>
+<div class="ttc" id="class_l_a_p_i_n_html_a1b1eba5815663f550334f43c66769a97"><div class="ttname"><a href="class_l_a_p_i_n.html#a1b1eba5815663f550334f43c66769a97">LAPIN::m_lapThreshold</a></div><div class="ttdeci">QLAPINThreshold m_lapThreshold</div><div class="ttdoc">Objet de seuillage d'image.</div><div class="ttdef"><b>Definition:</b> <a href="lapin_8h_source.html#l00043">lapin.h:43</a></div></div>
+<div class="ttc" id="class_l_a_p_i_n_html_a8452bbb6bcec62976282b37014d293a1"><div class="ttname"><a href="class_l_a_p_i_n.html#a8452bbb6bcec62976282b37014d293a1">LAPIN::m_qTimer</a></div><div class="ttdeci">QTimer m_qTimer</div><div class="ttdoc">Timer de prévisualisation.</div><div class="ttdef"><b>Definition:</b> <a href="lapin_8h_source.html#l00045">lapin.h:45</a></div></div>
+<div class="ttc" id="qlapinthreshold_8h_html"><div class="ttname"><a href="qlapinthreshold_8h.html">qlapinthreshold.h</a></div><div class="ttdoc">Déclaration de la classe QLAPINThreshold.</div></div>
+<div class="ttc" id="class_l_a_p_i_n_html_a9da8f21378152169bc0d8a7bfd0d25c6"><div class="ttname"><a href="class_l_a_p_i_n.html#a9da8f21378152169bc0d8a7bfd0d25c6">LAPIN::LAPIN</a></div><div class="ttdeci">LAPIN(QWidget *parent=0, Qt::WindowFlags flags=0)</div><div class="ttdoc">Constructeur.</div><div class="ttdef"><b>Definition:</b> <a href="lapin_8cpp_source.html#l00023">lapin.cpp:23</a></div></div>
+<div class="ttc" id="class_l_a_p_i_n_html_a2f5b92920c55507456a9d386465f2d9a"><div class="ttname"><a href="class_l_a_p_i_n.html#a2f5b92920c55507456a9d386465f2d9a">LAPIN::on_actionQuitter_triggered</a></div><div class="ttdeci">void on_actionQuitter_triggered()</div><div class="ttdoc">Slot connecté à l'action &quot;Quitter&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="lapin_8cpp_source.html#l00191">lapin.cpp:191</a></div></div>
+<div class="ttc" id="class_l_a_p_i_n_html"><div class="ttname"><a href="class_l_a_p_i_n.html">LAPIN</a></div><div class="ttdoc">Lapin.</div><div class="ttdef"><b>Definition:</b> <a href="lapin_8h_source.html#l00028">lapin.h:28</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="lapin_8h.html">lapin.h</a></li>
+    <li class="footer">Généré le Dimanche 5 Janvier 2020 15:11:37 pour LAPIN - Logiciel d&#39;Apprentissage Pour Imagerie Numérique par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
+</body>
+</html>

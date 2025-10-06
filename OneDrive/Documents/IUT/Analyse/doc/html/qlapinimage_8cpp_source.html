@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LAPIN - Logiciel d&#39;Apprentissage Pour Imagerie Numérique:  Fichier source de qlapinimage.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">LAPIN - Logiciel d&#39;Apprentissage Pour Imagerie Numérique
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('qlapinimage_8cpp_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">qlapinimage.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="qlapinimage_8cpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="qlapinimage_8h.html">qlapinimage.h</a>&quot;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;QFile.h&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_q_l_a_p_i_n_image.html#a4e45b5c01cb5f35db87461a84799b29b">   20</a></span>&#160;<a class="code" href="class_q_l_a_p_i_n_image.html#a4e45b5c01cb5f35db87461a84799b29b">QLAPINImage::QLAPINImage</a>(QSize sizPreviewSize, QObject *parent)</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  : QObject(parent)</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  , m_sizPreviewSize(sizPreviewSize)</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  , m_bPreviewOK(false)</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_q_l_a_p_i_n_image.html#a6db8057a511975ec32e2c5a324f6439c">   33</a></span>&#160;<a class="code" href="class_q_l_a_p_i_n_image.html#a6db8057a511975ec32e2c5a324f6439c">QLAPINImage::~QLAPINImage</a>()</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_q_l_a_p_i_n_image.html#a1b3b2c7ebd924895abf7230e2dfcce05">   51</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_q_l_a_p_i_n_image.html#a1b3b2c7ebd924895abf7230e2dfcce05">QLAPINImage::Load</a>(<span class="keyword">const</span> QString&amp; filename)</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordflow">if</span>(!<a class="code" href="class_q_l_a_p_i_n_image.html#a0911b70583cdd7630f82c6458324e1aa">m_imgGrayImage</a>.load(filename))</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="comment">//Conversion en niveaux de gris</span></div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <a class="code" href="class_q_l_a_p_i_n_image.html#a0911b70583cdd7630f82c6458324e1aa">m_imgGrayImage</a> = <a class="code" href="class_q_l_a_p_i_n_image.html#a0911b70583cdd7630f82c6458324e1aa">m_imgGrayImage</a>.convertToFormat(QImage::Format::Format_Grayscale8);</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <a class="code" href="class_q_l_a_p_i_n_image.html#afccf8af5d5d2f8fffb53d298368f84a1">MakePreview</a>();</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div><div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_q_l_a_p_i_n_image.html#ae0a68431233c3ed29aaa2b6665f87afa">   76</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_q_l_a_p_i_n_image.html#ae0a68431233c3ed29aaa2b6665f87afa">QLAPINImage::Save</a>(<span class="keyword">const</span> QString&amp; filename)</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  QFile qFile(filename);</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordflow">if</span>(!qFile.open(QIODevice::WriteOnly|QIODevice::Truncate))</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> nHeight = <a class="code" href="class_q_l_a_p_i_n_image.html#a0911b70583cdd7630f82c6458324e1aa">m_imgGrayImage</a>.height();</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> nWidth = <a class="code" href="class_q_l_a_p_i_n_image.html#a0911b70583cdd7630f82c6458324e1aa">m_imgGrayImage</a>.width();</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  QString qHeader;</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  qHeader = QString(<span class="stringliteral">&quot;P4\n%1 %2\n&quot;</span>).arg(nWidth).arg(nHeight);</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  qFile.write(qHeader.toLatin1());</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordtype">int</span> nBufferLength = nWidth/8;</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keywordflow">if</span>(nBufferLength*8 != nWidth) nBufferLength++;</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> y=0; y&lt;nHeight; ++y)</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  {</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    QByteArray qBuffer(nBufferLength,0);</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">int</span> x;</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">    #pragma omp parallel default(shared) private(x)</span></div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    {</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">      #pragma omp for </span></div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      <span class="keywordflow">for</span>(x=0; x&lt;nWidth; x+=8)</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      {</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> ucByte = 0;</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        </div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;8; ++i)</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        {</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;          <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> bit=0;</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;          ucByte&lt;&lt;=1;</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;          <span class="keywordflow">if</span>(qRed(<a class="code" href="class_q_l_a_p_i_n_image.html#a0911b70583cdd7630f82c6458324e1aa">m_imgGrayImage</a>.pixel(x+i,y)) == 0)</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            bit=1;</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;          ucByte |= bit;</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        qBuffer[x/8] = ucByte;</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      }</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    qFile.write(qBuffer);</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  }</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div><div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="class_q_l_a_p_i_n_image.html#ac56d6fd4ff6c2cae1f5edcf1528d4eff">  135</a></span>&#160;QImage&amp; <a class="code" href="class_q_l_a_p_i_n_image.html#ac56d6fd4ff6c2cae1f5edcf1528d4eff">QLAPINImage::GetImage</a>(<span class="keywordtype">bool</span> preview)</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;{</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <span class="keywordflow">if</span>(preview)</div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  {</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordflow">if</span>(!<a class="code" href="class_q_l_a_p_i_n_image.html#acd3c373aefe982a905ace5ddbc86b5f9">m_bPreviewOK</a>)</div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;      <a class="code" href="class_q_l_a_p_i_n_image.html#afccf8af5d5d2f8fffb53d298368f84a1">MakePreview</a>();</div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_q_l_a_p_i_n_image.html#a07e8060dac5a98eb564348c835c2647b">m_imgPreview</a>;</div><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  }</div><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="keywordflow">else</span></div><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  {</div><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <a class="code" href="class_q_l_a_p_i_n_image.html#acd3c373aefe982a905ace5ddbc86b5f9">m_bPreviewOK</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_q_l_a_p_i_n_image.html#a0911b70583cdd7630f82c6458324e1aa">m_imgGrayImage</a>;</div><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  }</div><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;}</div><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div><div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="class_q_l_a_p_i_n_image.html#afccf8af5d5d2f8fffb53d298368f84a1">  159</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_q_l_a_p_i_n_image.html#afccf8af5d5d2f8fffb53d298368f84a1">QLAPINImage::MakePreview</a>()</div><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;{</div><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <span class="comment">//Rééchantillonage pour affichage</span></div><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <a class="code" href="class_q_l_a_p_i_n_image.html#a07e8060dac5a98eb564348c835c2647b">m_imgPreview</a> = <a class="code" href="class_q_l_a_p_i_n_image.html#a0911b70583cdd7630f82c6458324e1aa">m_imgGrayImage</a>.scaled(<a class="code" href="class_q_l_a_p_i_n_image.html#aabd9e5b832242126d5df7b6dc86aba4a">m_sizPreviewSize</a>, Qt::KeepAspectRatio, Qt::SmoothTransformation);</div><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <a class="code" href="class_q_l_a_p_i_n_image.html#acd3c373aefe982a905ace5ddbc86b5f9">m_bPreviewOK</a> = <span class="keyword">true</span>;</div><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;}</div><div class="ttc" id="qlapinimage_8h_html"><div class="ttname"><a href="qlapinimage_8h.html">qlapinimage.h</a></div><div class="ttdoc">Déclaration de la classe QLAPINImage.</div></div>
+<div class="ttc" id="class_q_l_a_p_i_n_image_html_a1b3b2c7ebd924895abf7230e2dfcce05"><div class="ttname"><a href="class_q_l_a_p_i_n_image.html#a1b3b2c7ebd924895abf7230e2dfcce05">QLAPINImage::Load</a></div><div class="ttdeci">bool Load(const QString &amp;filename)</div><div class="ttdoc">Charge une image.</div><div class="ttdef"><b>Definition:</b> <a href="qlapinimage_8cpp_source.html#l00051">qlapinimage.cpp:51</a></div></div>
+<div class="ttc" id="class_q_l_a_p_i_n_image_html_ae0a68431233c3ed29aaa2b6665f87afa"><div class="ttname"><a href="class_q_l_a_p_i_n_image.html#ae0a68431233c3ed29aaa2b6665f87afa">QLAPINImage::Save</a></div><div class="ttdeci">bool Save(const QString &amp;filename)</div><div class="ttdoc">Enregistre une image au format pbm.</div><div class="ttdef"><b>Definition:</b> <a href="qlapinimage_8cpp_source.html#l00076">qlapinimage.cpp:76</a></div></div>
+<div class="ttc" id="class_q_l_a_p_i_n_image_html_a6db8057a511975ec32e2c5a324f6439c"><div class="ttname"><a href="class_q_l_a_p_i_n_image.html#a6db8057a511975ec32e2c5a324f6439c">QLAPINImage::~QLAPINImage</a></div><div class="ttdeci">~QLAPINImage()</div><div class="ttdoc">Destructeur.</div><div class="ttdef"><b>Definition:</b> <a href="qlapinimage_8cpp_source.html#l00033">qlapinimage.cpp:33</a></div></div>
+<div class="ttc" id="class_q_l_a_p_i_n_image_html_afccf8af5d5d2f8fffb53d298368f84a1"><div class="ttname"><a href="class_q_l_a_p_i_n_image.html#afccf8af5d5d2f8fffb53d298368f84a1">QLAPINImage::MakePreview</a></div><div class="ttdeci">void MakePreview()</div><div class="ttdoc">Fonction permettant de synchroniser la miniature avec l'image complète.</div><div class="ttdef"><b>Definition:</b> <a href="qlapinimage_8cpp_source.html#l00159">qlapinimage.cpp:159</a></div></div>
+<div class="ttc" id="class_q_l_a_p_i_n_image_html_a0911b70583cdd7630f82c6458324e1aa"><div class="ttname"><a href="class_q_l_a_p_i_n_image.html#a0911b70583cdd7630f82c6458324e1aa">QLAPINImage::m_imgGrayImage</a></div><div class="ttdeci">QImage m_imgGrayImage</div><div class="ttdoc">L'objet QImage de l'image complète.</div><div class="ttdef"><b>Definition:</b> <a href="qlapinimage_8h_source.html#l00045">qlapinimage.h:45</a></div></div>
+<div class="ttc" id="class_q_l_a_p_i_n_image_html_ac56d6fd4ff6c2cae1f5edcf1528d4eff"><div class="ttname"><a href="class_q_l_a_p_i_n_image.html#ac56d6fd4ff6c2cae1f5edcf1528d4eff">QLAPINImage::GetImage</a></div><div class="ttdeci">QImage &amp; GetImage(bool preview)</div><div class="ttdoc">Récupère un objet QImage représentant soit la miniature, soit l'image complète.</div><div class="ttdef"><b>Definition:</b> <a href="qlapinimage_8cpp_source.html#l00135">qlapinimage.cpp:135</a></div></div>
+<div class="ttc" id="class_q_l_a_p_i_n_image_html_aabd9e5b832242126d5df7b6dc86aba4a"><div class="ttname"><a href="class_q_l_a_p_i_n_image.html#aabd9e5b832242126d5df7b6dc86aba4a">QLAPINImage::m_sizPreviewSize</a></div><div class="ttdeci">QSize m_sizPreviewSize</div><div class="ttdoc">La taille de la miniature.</div><div class="ttdef"><b>Definition:</b> <a href="qlapinimage_8h_source.html#l00047">qlapinimage.h:47</a></div></div>
+<div class="ttc" id="class_q_l_a_p_i_n_image_html_acd3c373aefe982a905ace5ddbc86b5f9"><div class="ttname"><a href="class_q_l_a_p_i_n_image.html#acd3c373aefe982a905ace5ddbc86b5f9">QLAPINImage::m_bPreviewOK</a></div><div class="ttdeci">bool m_bPreviewOK</div><div class="ttdoc">Flag permettant de savoir si la miniature est synchronisée avec l'image complète.</div><div class="ttdef"><b>Definition:</b> <a href="qlapinimage_8h_source.html#l00049">qlapinimage.h:49</a></div></div>
+<div class="ttc" id="class_q_l_a_p_i_n_image_html_a4e45b5c01cb5f35db87461a84799b29b"><div class="ttname"><a href="class_q_l_a_p_i_n_image.html#a4e45b5c01cb5f35db87461a84799b29b">QLAPINImage::QLAPINImage</a></div><div class="ttdeci">QLAPINImage(QSize sizPreviewSize, QObject *parent=NULL)</div><div class="ttdoc">Constructeur.</div><div class="ttdef"><b>Definition:</b> <a href="qlapinimage_8cpp_source.html#l00020">qlapinimage.cpp:20</a></div></div>
+<div class="ttc" id="class_q_l_a_p_i_n_image_html_a07e8060dac5a98eb564348c835c2647b"><div class="ttname"><a href="class_q_l_a_p_i_n_image.html#a07e8060dac5a98eb564348c835c2647b">QLAPINImage::m_imgPreview</a></div><div class="ttdeci">QImage m_imgPreview</div><div class="ttdoc">L'objet QImage de la miniature.</div><div class="ttdef"><b>Definition:</b> <a href="qlapinimage_8h_source.html#l00043">qlapinimage.h:43</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="qlapinimage_8cpp.html">qlapinimage.cpp</a></li>
+    <li class="footer">Généré le Dimanche 5 Janvier 2020 15:11:37 pour LAPIN - Logiciel d&#39;Apprentissage Pour Imagerie Numérique par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
+</body>
+</html>
